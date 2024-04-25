@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Matheus Ortlieb</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/0887742ab1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Imagens/logo.png" class="logo"> <!-- preciso escolher uma logo -->
+                <ul id="sidemenu">
+                    <li><a href="#header">Inicio</a> <!-- preciso definir as seções --></li>
+                    <li><a href="#about">Sobre</a> </li>
+                    <li><a href="#services">Habilidades</a> </li>
+                    <li><a href="#portfolio">Projetos</a> </li>
+                    <li><a href="#contact">Contato</a> </li>
+                    <!-- COLOCAR ICONE de fechar menu -->
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i><!-- COLOCAR ICONE de abrir menu -->
+            </nav>
+            <div class="header-text">
+                <p>Engenheiro Físico</p>
+                <h1>Olá! Eu sou o <span>Matheus</span>,<br>estou em busca de<br>oportunidades profissionais.</h1>    <!-- arrumar a introdução -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------SOBRE----------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Imagens/perfil.png">    <!-- mudar a foto -->
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">Sobre Mim</h1>   <!-- mudar texto -->
+                    <p>    Sou recém-formado e tenho grande interesse na área de análise de elementos finitos, buscando oportunidades
+                     para aplicar meus conhecimentos e habilidades. Durante minha formação, adquiri conhecimentos em diversas áreas,
+                     como fluidodinâmica, circuitos elétricos, desenho técnico, mecânica dos sólidos, automação, óptica,
+                     eletromagnetismo e métodos numéricos e computacionais.<br><br></p>
+                     <p>Estou determinado a buscar novas experiências
+                        profissionais que me permitam crescer e me desenvolver ainda mais, seja por meio de uma posição profissional
+                         ou através de um mestrado, onde possa aprofundar meus conhecimentos e me tornar uma referência na
+                        área.</p>  <!-- mudar texto -->
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Habilidades</p> <!-- mudar seção -->
+                        <p class="tab-links" onclick="opentab('experiencia')">Idiomas</p> <!-- mudar seção -->
+                        <p class="tab-links" onclick="opentab('education')">Formação</p> <!-- mudar seção -->
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Inventor</span><br>Domínio avançado - Inventor básico ao avançado (Autocriativo)</li>   <!-- mudar texto -->
+                            <li><span>Ansys Workbench</span><br>Domínio avançado com o Mechanical e boa afinidade com o Fluent</li>   <!-- mudar texto -->
+                            <li><span>AutoCAD</span><br>Experiencia com projetos elétricos fotovoltaicos</li>   <!-- mudar texto -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiencia">
+                        <ul>
+                            <li><span>Portugês</span><br>Lingua nativa</li>   <!-- mudar texto -->
+                            <li><span>Inglês</span><br>Avançado</li>   <!-- mudar texto -->
+                            <li><span>Japonês</span><br>Básico (aprendendo por diversão)</li>   <!-- mudar texto -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bacharelado</span><br>Engenharia Física - Universidade Estadual de Mato Grosso do Sul 2018 / 2023</li>   <!-- mudar texto -->
+                            <li><span>&nbsp;</span><br>&nbsp;</li>
+                            <li><span>&nbsp;</span><br>&nbsp;</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- ----------------------------- SERVICES -------------------------------- -->
+   <div id="services">
+        <div class="container">
+            <h1 class="subtitle">Habilidades</h1>   <!-- mudar texto -->
+            <div class="services-list">
+                <div>
+                    <!-- COLOCAR ICONE -->
+                    <h2>Modelagem mecânica</h2> <!-- mudar texto -->
+                    <p>processo de criar representações digitais tridimensionais de objetos ou sistemas
+                         mecânicos utilizando software especializado.</p>  <!-- mudar texto -->
+                    <p class="part" onclick="openpart('part1')"><a href="#part1">Saiba mais</a></p>
+                </div>
+                <div>
+                    <!-- COLOCAR ICONE -->
+                    <h2>FEA</h2> <!-- mudar texto -->
+                    <p>técnica de engenharia utilizada para prever como um produto ou estrutura se comportará
+                         em determinadas condições de operação.</p>  <!-- mudar texto -->
+                    <p class="part" onclick="openpart('part2')"><a href="#part2">Saiba mais</a></p>
+                </div>
+                <div>
+                    <!-- COLOCAR ICONE -->
+                    <h2>Unifilar/Trifilar fotovoltaico</h2> <!-- mudar texto -->
+                    <p>representações diagramáticas do sistema elétrico de uma instalação, mostrando como os
+                         componentes estão interligados e como a energia flui através deles.</p>  <!-- mudar texto -->
+                    <p class="part" onclick="openpart('part3')"><a href="#part3">Saiba mais</a></p>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <!-- ------------------------------------------------- SIDE PARTS -------------------------------------- -->
+    <div class="sidepart" id="part1">
+        <h2>Introdução</h2>
+        <p>Nesta seção, vou destacar minha expertise em modelagem mecânica e meu domínio no software Autodesk Inventor.</p>
+        <h2>Modelagem de Peças</h2>
+        <p>Utilizo o Autodesk Inventor para criar modelos 3D precisos e detalhados de peças mecânicas. Minha experiência inclui 
+            desde componentes simples até modelos mais complexos.
+        </p>
+        <figure  class="outro">
+            <img class="outroimg" src="Imagens/Peçat.png" alt="Peça">
+            <img class="outroimg" src="Imagens/Peça 2BT.png" alt="Peça">
+            <img class="outroimg" src="Imagens/Peça 4T.png" alt="Peça">
+        </figure>
+
+        <h2>Desenhos Técnicos</h2>
+        <p>Com o Inventor, produzo desenhos técnicos detalhados que comunicam de forma clara e precisa as especificações
+            e detalhes de fabricação das peças e conjuntos mecânicos. Minha habilidade em criar desenhos técnicos contribui 
+            para um processo de fabricação mais suave e eficiente.
+        </p>
+        <figure class="outro2">
+            <img class="outroimg2" src="Imagens/Desenho.jpg" alt="Peça">
+            <img class="outroimg2" src="Imagens/Desenho.png" alt="Peça">
+        </figure>
+
+        <h2>Chapa de Metal</h2>
+        <p>Exploro as ferramentas de chapa de metal do Inventor para projetar e desenvolver peças e conjuntos fabricados em 
+            chapa metálica, possibiitando uma visão objetiva em relação as dobras e indicando sua ordem em uma vista planificada
+        </p>
+        <figure class="chapa">
+            <img class="chapaimg" src="Imagens/chapa de metal.png" alt="Peça">
+            <img class="chapaimg" src="Imagens/chapa de metal 2.png" alt="Peça">
+            <img class="chapaimg" src="Imagens/Chapa Ifeature.png" alt="Peça">
+        </figure>
+
+        <h2>Montagem / Assembly</h2>
+        <p>Utilizando a funcionalidade de montagem do Inventor, organizo as peças previamente criadas e realizo a montagem 
+            precisa de peças e componentes para criar conjuntos mecânicos com varias peças. Minha habilidade em montagem garante 
+            que todos os componentes se encaixem corretamente e funcionem conforme o esperado.
+        </p>
+
+        <h2>Inventor Studio</h2>
+        <p>Exploro as capacidades do Inventor Studio para criar visualizações e animações realistas dos meus modelos 3D. 
+            Essas visualizações são úteis para comunicar projetos aos clientes e stakeholders, além de facilitar o processo 
+            de design e tomada de decisões.
+        </p>
+
+        <h2>iParts</h2>
+        <p>Faço uso das iParts no Inventor para criar famílias de peças paramétricas, permitindo a rápida geração de variações 
+            de peças sem a necessidade de modelagem manual. Minha habilidade em trabalhar com iParts aumenta a eficiência do 
+            processo de design e fabricação.
+        </p>
+
+        <p>Essas são as principais ferramentas nas quais tenho proficiência no Autodesk Inventor, mas não são as únicas, 
+            dado que a gama de ferramentas e capacidades do Inventor é vasta.</p>
+        <a class="Esconder" onclick="closepart('part1')" id="scrollIndicator" href="#services" >Esconder</a>
+    </div>
+    <div class="sidepart" id="part2">
+        <h2>Ansys Workbench</h2>
+        <p>
+            O Ansys Workbench é minha principal ferramenta para simulações numéricas. Com ele, posso realizar análises em 
+            uma variedade de ambientes, como fluidodinâmica, térmica, estrutural, entre outros. Minha experiência inclui 
+            conhecimento nos ambientes de termodinâmica, estrutural e fluidodinâmica, abrangendo tanto regimes estáticos 
+            quanto transientes, no domínio do tempo ou da frequência. Esta versatilidade me permite abordar uma ampla gama 
+            de problemas de engenharia com confiança e precisão.
+        </p>
+
+        <h2>Femap</h2>
+        <p>Estou atualmente aprendendo a utilizar o Femap. Minhas habilidades com o software ainda são limitadas, mas estou 
+            empenhado em expandir meu conhecimento e habilidades nesta ferramenta.
+        </p>
+
+        <a class="Esconder" onclick="closepart('part2')" id="scrollIndicator" href="#services" >Esconder</a>
+    </div>
+    <div class="sidepart" id="part3">
+        <h2>Unifilar</h2>
+        <p>Unifilar
+            Na modalidade unifilar, os projetos consistem em representações simplificadas do sistema elétrico, mostrando 
+            todas as conexões em uma única linha. Estes projetos são ideais para uma visão geral e compreensão rápida do sistema.
+        </p>
+        <p>
+            São particularmente importantes para evitar confusão com o número de strings e entradas no inversor, garantindo 
+            que o projeto seja dimensionado corretamente em termos de corrente máxima, tensão e queda de tensão por distância.
+        </p>
+        <h2>Trifilar</h2>
+        <p>Já na modalidade trifilar, são utilizadas três linhas para representar as conexões elétricas: uma linha 
+            para a fase, uma linha para o neutro e uma linha para o terra. Este 
+            tipo de representação é mais detalhado e facilita a compreensão das interconexões entre os diferentes 
+            componentes do sistema elétrico.
+        </p>
+        <p>Minha experiência inclui a elaboração de projetos unifilares e trifilares, garantindo precisão e eficiência 
+            em cada projeto. Esses projetos são fundamentais para a instalação de sistemas fotovoltaicos, garantindo uma 
+            implementação segura e eficiente.
+        </p>
+            <a class="Esconder" onclick="closepart('part3')" id="scrollIndicator" href="#services" >Esconder</a>
+    </div>
+   <!-- ------------------------------------------------- PORTFOLIO --------------------------------------- -->
+   <div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">Projetos</h1>   <!-- mudar texto -->
+        <div class="work-list">
+            <div class="work">
+                <img src="Imagens/Barragem.png">
+                <div class="layer">
+                    <h3>FEA</h3> <!-- mudar texto -->
+                    <p>Análise térmica de uma barragem de concreto hipotética no período de hidratação</p>  <!-- mudar texto -->
+                    <a href="Estudos/Estudo1.html"><i class="fa-solid fa-right-to-bracket"></i><!-- COLOCAR ICONE --></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Imagens/Fixador2.png">
+                <div class="layer">
+                    <h3>Modelagem Mecânica</h3> <!-- mudar texto -->
+                    <p>Projeto de um dispositivo de fixação de bancada criado com o auxílio do software Inventor.</p>  <!-- mudar texto -->
+                    <a href="Estudos/Estudo2.html"><i class="fa-solid fa-right-to-bracket"></i><!-- COLOCAR ICONE --></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Imagens/construção.jpg">
+                <div class="layer">
+                    <h3>Unifilar/Trifilar</h3> <!-- mudar texto -->
+                    <p>Projeto Unifilar e Trifilar de um sistema fotovoltáico com inversor Sunways 5-KTL</p>  <!-- mudar texto -->
+                    <a href="Estudos/Estudo3.html"><i class="fa-solid fa-right-to-bracket"></i><!-- COLOCAR ICONE --></a>
+                </div>
+            </div>
+        </div>
+           <!-- ---------------------------------------------- MAIS ------------------------------------------------ -->
+        <p class="btn" onclick="portfoliopart('maisportfolio')">Ver mais</p> <!-- mudar texto -->
+        <div class="portfolio" id="maisportfolio">
+            <div class="work-list">
+                <div class="work">
+                    <img src="Imagens/construção.jpg">
+                    <div class="layer">
+                        <h3></h3> <!-- mudar texto -->
+                        <p>ainda estou desenvolvendo essa parte</p>  <!-- mudar texto -->
+                        <a href="Estudos/Estudo3.html"><i class="fa-solid fa-right-to-bracket"></i><!-- COLOCAR ICONE --></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Imagens/construção.jpg">
+                    <div class="layer">
+                        <h3></h3> <!-- mudar texto -->
+                        <p>ainda estou desenvolvendo essa parte</p>  <!-- mudar texto -->
+                        <a href="Estudos/Estudo3.html"><i class="fa-solid fa-right-to-bracket"></i><!-- COLOCAR ICONE --></a>
+                    </div>
+                </div>
+                <div class="nada">
+                    
+                    <div class="layer">
+                        <h3>&nbsp;</h3> <!-- mudar texto -->
+                        <p>&nbsp;</p>  <!-- mudar texto -->
+                        
+                    </div>
+                </div>
+            </div>
+            <p class="btn" onclick="closeportfolio('maisportfolio')" id="scrollIndicator2">Ver menos</p>
+        </div>
+    </div>
+   </div>
+   <!-- ------------------------------------ CONTACT ------------------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contatos</h1> <!-- mudar texto -->
+                <p><i class="fa-solid fa-envelope"></i>matheus.n.ortlieb@gmail.com</p>  <!-- mudar texto -->
+                <p><i class="fa-solid fa-phone"></i>(67) 99667-7792</p>   <!-- mudar texto -->
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/matheus-nunes-ortlieb/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/matheus_n_ortlieb"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="Imagens/Curriculo.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="nome" placeholder="Seu nome" required>    <!-- mudar texto -->
+                    <input type="text" name="email" placeholder="Seu e-mail" required>  <!-- mudar texto -->
+                    <textarea name="mensagem"  rows="6" placeholder="Mensagem"></textarea>   <!-- mudar texto -->
+                    <button type="submit" class="btn btn2">Enviar mensagem</button>   <!-- mudar texto -->
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Feito pelo Matheus</p>  <!-- mudar texto -->
+    </div>
+</div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <!-- MUDAR TEXTO    MUDAR TEXTO MUDAR TEXTO MUDAR TEXTO -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxREk6yDw90AhwDLdbZ7EXcVjNFduoD7pkQ5Tu7UY5cmILkPEJK9u2XUYakVYosBDKrQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Mensagem enviada com sucesso"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+   <!-- ------------------------------------------------- SIDE PARTS -------------------------------------- -->
+   <script>
+    var sidepart = document.getElementsByClassName("sidepart");
+
+    function openpart(partname){
+        for(parte of sidepart){
+            parte.classList.remove("ativo");
+        }
+        document.getElementById(partname).classList.add("ativo");
+    }
+    function closepart(partname){
+        for(parte of sidepart){
+            parte.classList.remove("ativo");
+        }
+    }
+    window.addEventListener('DOMContentLoaded', function() {
+    var scrollIndicator = document.getElementById('scrollIndicator');
+    var servicesList = document.querySelector('.sidepart');
+
+    function updateScrollIndicatorPosition() {
+        var servicesListRect = servicesList.getBoundingClientRect();
+        var servicesListTop = servicesListRect.top + 900;
+        var servicesListBottom = servicesListRect.bottom + servicesListRect.height + 420;
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollPosition > servicesListTop && scrollPosition <= servicesListBottom) {
+            scrollIndicator.style.position = 'sticky';
+            scrollIndicator.style.bottom = '20px';
+        } else {
+            scrollIndicator.style.position = 'static';
+        }
+    }
+
+    window.addEventListener('scroll', updateScrollIndicatorPosition);
+});
+// ------------------------------------ PORTFOLIO ---------------------------------
+    var portfolio = document.getElementsByClassName("portfolio");
+    var btn = document.getElementsByClassName("btn");
+
+    function portfoliopart(portfolioname){
+        for(portfolios of portfolio){
+            portfolios.classList.remove("ativo2");
+        }
+        document.getElementById(portfolioname).classList.add("ativo2");
+        btn[0].classList.add("inativo");
+    }
+    function closeportfolio(portfolioname){
+        for(portfolios of portfolio){
+            portfolios.classList.remove("ativo2");
+        }
+        for (buttons of btn){
+        buttons.classList.remove("inativo");
+        }
+    }
+   </script>
+    
+</body>
+</html>

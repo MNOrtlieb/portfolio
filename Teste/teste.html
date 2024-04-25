@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Toggle</title>
+    <style>
+        .escondido {
+            display: none;
+        }
+        .ativo {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="link" data-target="div1">Mostrar Div 1</a>
+    <a href="#" class="link" data-target="div2">Mostrar Div 2</a>
+    
+    <div id="div1" class="escondido">Conteúdo da div 1</div>
+    <div id="div2" class="escondido">Conteúdo da div 2</div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    // Seleciona todos os links
+    var links = document.querySelectorAll('.link');
+
+    // Adiciona um evento de clique a cada link
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            // Evita o comportamento padrão de redirecionamento
+            event.preventDefault();
+
+            // Obtém o ID da div alvo
+            var targetId = this.getAttribute('data-target');
+            
+            // Seleciona a div alvo
+            var targetDiv = document.getElementById(targetId);
+
+            // Esconde todas as divs
+            hideAllDivs();
+
+            // Exibe apenas a div alvo
+            targetDiv.classList.remove('escondido');
+            targetDiv.classList.add('ativo');
+        });
+    });
+
+    // Função para esconder todas as divs
+    function hideAllDivs() {
+        var divs = document.querySelectorAll('.ativo');
+        divs.forEach(function(div) {
+            div.classList.remove('ativo');
+            div.classList.add('escondido');
+        });
+    }
+});
+    </script>
+</body>
+</html>
