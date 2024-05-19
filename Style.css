@@ -292,6 +292,19 @@ nav ul li a:hover::after{
 }
 
 /* ------------------------------------ CONTACT ------------------------------------- */
+#contact{
+    margin-top: -50px;
+}
+.row2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.row2 p{
+    text-indent: 20px;
+    text-align: justify;
+}
 .contact-left{
     flex-basis: 35%;
 }
@@ -300,6 +313,7 @@ nav ul li a:hover::after{
     color: #6f00dd;
 }
 .contact-right{
+    padding-top: 4%;
     flex-basis: 60%;
 }
 .contact-left p{
@@ -357,11 +371,14 @@ nav .fa-solid{
     display: none;
 }
 @media only screen and (max-width: 600px){
+    body{
+        background: #1f2020; /**preciso escolher uma cor **/
+    }
     /**#header{*/
         /**background-image: url(Imagens/Eu.png); /* Mudar imagem */
     /**}*/
     .header-text{
-        margin-top: 50%;
+        margin-top: 70%;
         font-size: 16px;
     }
     .header-text h1{
@@ -377,6 +394,7 @@ nav .fa-solid{
         margin-bottom: 30px;
     }
     .about-col-2{
+        padding-right: 5%;
         font-size: 14px;
     }
     .tab-links{
@@ -385,15 +403,18 @@ nav .fa-solid{
     }
     .contact-left, .contact-right{
         flex-basis: 100%;
+        justify-content: center;
     }
     .copyright{
-        font-size: 14px;
+        font-size: 12px;
     }
     nav .fa-regular{
         display: block;
         font-size: 25px;
     }
     nav .fa-solid{
+        margin-left: 75vw;
+        position: fixed;
         display: block;
         font-size: 25px;
     }
@@ -428,6 +449,22 @@ nav .fa-solid{
         display: flex;
         flex-direction: column;
     }
+    #contact{
+        justify-content: center;
+        text-align: center;
+    }
+    .row2 p{
+        text-indent: 0px;
+        text-align: center;
+    }
+    .badge-base{
+        padding-left: 17vw;
+        padding-top: 30px;
+    }
+    .layer{
+        height: 100%;
+    }
+
 }
 #msg{
     color: #fcffee;
