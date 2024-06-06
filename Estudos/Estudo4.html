@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Página</title>
+    <link rel="stylesheet" href="Estudoestilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Análise de Pedivela de Bicicleta</h1>
+        <div class="line"></div>
+        <div class="content">
+            <h2>Resumo</h2>
+            <p>Neste módulo, realizamos uma análise estrutural de um pedivela de bicicleta utilizando
+                o software ANSYS Mechanical. O objetivo principal foi estudar o comportamento do pedivela
+                de alumínio 6061-T6 sob uma carga estática de 100 lbf. A análise incluiu a definição das
+                condições de contorno e carga, geração da malha, e resolução das equações de equilíbrio 
+                através do método de elementos finitos.
+            </p>
+
+            <h2>Objetivos</h2>
+                <ul>
+                <li>Desenvolver uma solução para um problema de mecânica estrutural 3D usando ANSYS Mechanical.</li>
+                <li>Verificar e validar os resultados numéricos obtidos no ANSYS.</li>
+                <li>Relacionar as etapas do ANSYS aos conceitos de Análise de Elementos Finitos.</li>
+                </ul>
+                <h3>Objetivos Específicos</h3>
+                <ul>
+                    <li>Criar e analisar a forma deformada e o campo de deslocamento.</li>
+                    <li>Criar e analisar a distribuição de tensões no pedivela.</li>
+                </ul>
+
+            <h2>Especificação do Problema</h2>
+                <p>Para esta aplicação, consideramos um pedivela de bicicleta composto por uma liga de alumínio 6061-T6, 
+                    submetido a uma força estática. As propriedades do material incluem:</p>
+                <li>Módulo de Young: 1 x 10^7 psi</li>
+                <li>Razão de Poisson: 0.33</li>
+                <p>As condições do problema podem ser vistas na imagem abaixo e são as seguintes:</p>
+                <li>As superfícies de três furos à esquerda estão fixas.</li>
+                <li>Uma carga de 100 lbf (45,36 kgf) é aplicada na superfície do furo direito na direção ascendente.</li>
+                <img class="grande" src="../Imagens/Estudo4/boundary conditions 1.png" alt="Imagem 2">
+            
+            <h2>Equações Fundamentais</h2>
+                <p>Considerando um elemento infinitesimal de material submetido a diferentes reações como compressão, tensão 
+                e cisalhamento, temos:</p>
+                <img class="grande" src="../Imagens/Estudo4/Equação.png" alt="Imagem 2">
+                <p>Para este problema, onde não há forças de corpo e a gravidade é desprezível, as tensões são relacionadas 
+                    às deformações pela matriz de elasticidade do material.</p>
+
+            <h2>Malha</h2>
+                <p>Foi utilizado um método multizona, que decompõe automaticamente a geometria em regiões mapeadas e livres, 
+                    gerando uma malha hexaédrica quando possível e preenchendo regiões mais complexas com malha não estruturada. 
+                    O tamanho dos elementos adotado foi de 0.2 in, com uma condição de dimensionamento da face de 0.1 in nos 
+                    furos fixos.</p>
+                    <img class="grande" src="../Imagens/Estudo4/bike crank mesh.png" alt="Imagem 2">
+
+            <h2>Resultados e Verificação</h2>
+            <h3>Deformação:</h3>
+            <p>A maior deformação ocorre no lado direito, onde a força é aplicada, com um máximo de 0.00519 in.</p>
+            <div class="resultados">
+                <img class="especial" src="../Imagens/Estudo4/deformation.png" alt="Temperaturas camada unica">
+                <img class="especial" src="../Imagens/Estudo4/deformation.gif" alt="Temperaturas camada unica">
+            </div>
+            <h3>Tensões:</h3>
+            <p>A análise da tensão normal na direção x (σx) mostrou que a maior tensão ocorre na seção média do 
+                pedivela, devido ao afinamento nesta parte.</p>
+                <div class="resultados">
+                    <img class="especial" src="../Imagens/Estudo4/StressSigmaX.png" alt="Temperaturas camada unica">
+                    <img class="especial" src="../Imagens/Estudo4/StressSigmaXplane.png" alt="Temperaturas camada unica">
+                </div>
+            
+            <h2>Conclusões</h2>
+            <p>A análise do pedivela demonstrou que os resultados numéricos são consistentes com os valores teóricos e 
+                independentes da malha. As principais áreas de concentração de tensão foram identificadas, permitindo 
+                futuras otimizações no design.</p>
+
+            <!-- Adicione mais subtítulos e imagens conforme necessário -->
+        </div>
+    </div>
+    <a class="footer-link" href="../index.html">Voltar</a>
+    <a href="Bike Crank.pdf" download class="btn btn2"> Baixar trabalho completo</a>
+</body>
+</html>
